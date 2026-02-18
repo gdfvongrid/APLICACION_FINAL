@@ -1,0 +1,30 @@
+{
+  "paneles": [
+    {
+      "nombre": "Panel Solar JA SOLAR 455W 24V Monocristalino PERC",
+      "wp": 455.0,
+      "precioBs": 1949.41,
+      "tipo": "Monocristalino PERC"
+    },
+    {
+      "nombre": "Panel Solar JA SOLAR 550W 24V Monocristalino",
+      "wp": 550.0,
+      "precioBs": 2357.36,
+      "tipo": "Monocristalino"
+    }
+  ],
+  "inversores": [
+    {
+      "nombre": "Inversor Red Growatt MIN 5000TL-X",
+      "pacW": 5000.0,
+      "precioBs": 10838.35,
+      "tipo": "Monofásico"
+    },
+    {
+      "nombre": "Inversor Red Growatt MOD 10KTL3-X",
+      "pacW": 10000.0,
+      "precioBs": 16533.67,
+      "tipo": "Trifásico"
+    }
+  ]
+}
