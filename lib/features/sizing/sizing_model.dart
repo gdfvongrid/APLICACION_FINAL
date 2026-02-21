@@ -1,3 +1,4 @@
+// lib/features/sizing/sizing_model.dart
 enum MountType { roof, ground }
 
 enum PvOrientation { north, notNorth }
@@ -20,7 +21,7 @@ class SizingInput {
     required this.mountType,
     required this.orientation,
     this.pr = 0.80,
-    this.dcAcRatioTarget = 1.20,
+    this.dcAcRatioTarget = 1.40,
     this.allowBifacial = true,
   });
 }
@@ -44,6 +45,10 @@ class SizingResult {
   final double inverterCostBs;
   final double bosCostBs;
 
+  // NUEVOS (opcional para mostrar conexión/strings)
+  final String connection; // ej. "1Φ 220 V" o "3Φ 380/220 V"
+  final String stringing; // ej. "2 strings × 7 módulos"
+
   const SizingResult({
     required this.kwhAvg,
     required this.kwhTarget,
@@ -59,5 +64,10 @@ class SizingResult {
     required this.panelsCostBs,
     required this.inverterCostBs,
     required this.bosCostBs,
+    this.connection = '',
+    this.stringing = '',
   });
+
+  // Getter útil para la UI
+  double get dcAcRatio => inverterAcKw <= 0 ? 0.0 : (pdcRealKw / inverterAcKw);
 }

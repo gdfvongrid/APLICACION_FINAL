@@ -40,6 +40,381 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
+    'D3-PD-BT': BlockTariff(
+      fixedChargeBs: 29.298,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.823,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.930,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.968,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.096,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.551,
+        ),
+      ],
+    ),
+    'D4-PD-BT': BlockTariff(
+      fixedChargeBs: 29.298,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.823,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.984,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 1.022,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.144,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.620,
+        ),
+      ],
+    ),
+    'D4-PD-BT': BlockTariff(
+      fixedChargeBs: 29.298,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.823,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.984,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 1.022,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.144,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.620,
+        ),
+      ],
+    ),
+    'D5-PD-BT': BlockTariff(
+      fixedChargeBs: 77.032,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 100,
+          rateBsPerKwh: 0.814,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 100,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.896,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.986,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.180,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.672,
+        ),
+      ],
+    ),
+    'D2-PD-MT': BlockTariff(
+      fixedChargeBs: 29.298,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.727,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.698,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.784,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 0.952,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.344,
+        ),
+      ],
+    ),
+    'D2-PD-MT': BlockTariff(
+      fixedChargeBs: 29.298,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.727,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.698,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.784,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 0.952,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.344,
+        ),
+      ],
+    ),
+    'D5-PD-MT': BlockTariff(
+      fixedChargeBs: 77.032,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 100,
+          rateBsPerKwh: 0.778,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 100,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.855,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.939,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.121,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.591,
+        ),
+      ],
+    ),
+    'D5-PD-MT': BlockTariff(
+      fixedChargeBs: 77.032,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 100,
+          rateBsPerKwh: 0.778,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 100,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.855,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.939,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.121,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.591,
+        ),
+      ],
+    ),
+    'G-PD-BT': BlockTariff(
+      fixedChargeBs: 40.583,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 100,
+          rateBsPerKwh: 1.131,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 100,
+          endKwhInclusive: 200,
+          rateBsPerKwh: 1.355,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 200,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.414,
+        ),
+      ],
+    ),
+    'G-PD-MT': BlockTariff(
+      fixedChargeBs: 40.583,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.721,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 1.101,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.347,
+        ),
+      ],
+    ),
+    'I-PD-BT': BlockTariff(
+      fixedChargeBs: 16.596,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 250,
+          rateBsPerKwh: 0.440,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 250,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.701,
+        ),
+      ],
+    ),
+    'I-PD-MT': BlockTariff(
+      fixedChargeBs: 29.871,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 250,
+          rateBsPerKwh: 0.344,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 250,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.649,
+        ),
+      ],
+    ),
+    'MI-PD-BT': BlockTariff(
+      fixedChargeBs: 29.871,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.919,
+        ),
+      ],
+    ),
+    'MI-PD-MT': BlockTariff(
+      fixedChargeBs: 29.871,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 250,
+          rateBsPerKwh: 0.631,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 250,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.948,
+        ),
+      ],
+    ),
+    'AG-PD-BT': BlockTariff(
+      fixedChargeBs: 40.583,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 100,
+          rateBsPerKwh: 0.697,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 100,
+          endKwhInclusive: 200,
+          rateBsPerKwh: 0.772,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 200,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.807,
+        ),
+      ],
+    ),
+    'AG-PD-MT': BlockTariff(
+      fixedChargeBs: 40.583,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 50,
+          rateBsPerKwh: 0.411,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 50,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.681,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.769,
+        ),
+      ],
+    ),
   },
   Distributor.endeDelbeni: {
     'Agua potable y alcantarillado': BlockTariff(
@@ -59,66 +434,6 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           startKwhExclusive: 0,
           endKwhInclusive: null,
           rateBsPerKwh: 1.527,
-        ),
-      ],
-    ),
-    'Comercialización VE Carga Lenta': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.782,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.134,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.97,
-        ),
-      ],
-    ),
-    'Comercialización VE Carga Rapida': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 2.056,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.408,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.246,
-        ),
-      ],
-    ),
-    'Comercialización VE Carga Semi Rápida': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.846,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.198,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.034,
         ),
       ],
     ),
@@ -157,47 +472,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Estaciones de Recarga VE-1(BT)': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.574,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.944,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.788,
-        ),
-      ],
-    ),
-    'Estaciones de Recarga VE-2(MT)': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.154,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.693,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.577,
-        ),
-      ],
-    ),
-    'General 1': BlockTariff(
+    'General 1 y General SFL 1': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -217,52 +492,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'General 1 SFL': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 0.71035,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 20,
-          endKwhInclusive: 100,
-          rateBsPerKwh: 1.464,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 100,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.537,
-        ),
-      ],
-    ),
-    'General 2': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 2.1003,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 20,
-          endKwhInclusive: 100,
-          rateBsPerKwh: 1.94,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 100,
-          endKwhInclusive: 200,
-          rateBsPerKwh: 1.989,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 200,
-          endKwhInclusive: null,
-          rateBsPerKwh: 2.127,
-        ),
-      ],
-    ),
-    'General 2 SFL': BlockTariff(
+    'General 2 y General 2 SFL': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -369,67 +599,6 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-
-    'Agua Potable GD BT': BlockTariff(
-      fixedChargeBs: 30.686,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.54,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.437,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.35,
-        ),
-      ],
-    ),
-    'Agua Potable GD MT': BlockTariff(
-      fixedChargeBs: 30.686,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.269,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.421,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.333,
-        ),
-      ],
-    ),
-    'Agua Potable GD MT SR': BlockTariff(
-      fixedChargeBs: 38.481,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.044,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.015,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.014,
-        ),
-      ],
-    ),
     'Agua Potable MD BT': BlockTariff(
       fixedChargeBs: 15.342,
       blocks: const [
@@ -480,101 +649,6 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Alta Tensión GD': BlockTariff(
-      fixedChargeBs: 19.884,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 200,
-          rateBsPerKwh: 0.65,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 200,
-          rateBsPerKwh: 0.35,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 200,
-          rateBsPerKwh: 0.325,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 200,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.54,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 200,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.293,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 200,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.274,
-        ),
-      ],
-    ),
-    'Autoproductores GD BT': BlockTariff(
-      fixedChargeBs: 164.262,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.264,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.155,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.152,
-        ),
-      ],
-    ),
-    'Autoproductores GD MT': BlockTariff(
-      fixedChargeBs: 164.262,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.242,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.143,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.14,
-        ),
-      ],
-    ),
-    'Autoproductores MD BT': BlockTariff(
-      fixedChargeBs: 88.449,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.195,
-        ),
-      ],
-    ),
-    'Autoproductores MD MT': BlockTariff(
-      fixedChargeBs: 88.449,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.177,
-        ),
-      ],
-    ),
     'Domiciliaria GD BT': BlockTariff(
       fixedChargeBs: 38.487,
       blocks: const [
@@ -609,47 +683,47 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.25,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.666,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.286,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.263,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.726,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.308,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.286,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.729,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.309,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.287,
         ),
@@ -704,47 +778,47 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.279,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.681,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.312,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.292,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.735,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.34,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.319,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.738,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.341,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.32,
         ),
@@ -774,22 +848,22 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.037,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.465,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.497,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.54,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.542,
         ),
@@ -809,22 +883,22 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.041,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.449,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.477,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.519,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.521,
         ),
@@ -849,17 +923,17 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.846,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.081,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.138,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.142,
         ),
@@ -879,27 +953,27 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.137,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 100,
           rateBsPerKwh: 0.74,
         ),
         EnergyBlock(
-          startKwhExclusive: 101,
+          startKwhExclusive: 100,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.799,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.903,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.975,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 0.978,
         ),
@@ -950,17 +1024,17 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.015,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.09,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.422,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.388,
         ),
@@ -1000,17 +1074,17 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.015,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.102,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.417,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.39,
         ),
@@ -1040,7 +1114,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.043,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.684,
         ),
@@ -1060,7 +1134,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.037,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.681,
         ),
@@ -1085,7 +1159,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.166,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.711,
         ),
@@ -1105,12 +1179,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.179,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.115,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.688,
         ),
@@ -1140,32 +1214,32 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.018,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.305,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.695,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.641,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 2.038,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.067,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.987,
         ),
@@ -1205,32 +1279,32 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.018,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.305,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.686,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.642,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 2.038,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.057,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.99,
         ),
@@ -1260,12 +1334,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.047,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.977,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.522,
         ),
@@ -1285,12 +1359,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.037,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 0.945,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.483,
         ),
@@ -1310,12 +1384,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.8211,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.524,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 1000,
           rateBsPerKwh: 2.001,
         ),
@@ -1335,17 +1409,17 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.202,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.337,
         ),
         EnergyBlock(
-          startKwhExclusive: 301,
+          startKwhExclusive: 300,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.974,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.667,
         ),
@@ -1690,7 +1764,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.846,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.081,
         ),
@@ -1712,7 +1786,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.9724,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.759,
         ),
@@ -1733,7 +1807,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Alumbrado público menor': BlockTariff(
+    'Alumbrado público Menor': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -1752,7 +1826,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.9824,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.761,
         ),
@@ -1763,16 +1837,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Cementeras': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.66,
-        ),
-      ],
-    ),
+
     'Comercial 1': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
@@ -1782,12 +1847,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.2846,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.231,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.395,
         ),
@@ -1798,7 +1863,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Comercial 2': BlockTariff(
+    'Comercial 2 y 3': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -1812,7 +1877,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.225,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.271,
         ),
@@ -1823,31 +1888,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Comercial 3': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 40,
-          rateBsPerKwh: 1.74215,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 41,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 1.225,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 1.271,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 300,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.963,
-        ),
-      ],
-    ),
+
     'Domiciliaria': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
@@ -1857,22 +1898,22 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.9824,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 70,
           rateBsPerKwh: 0.768,
         ),
         EnergyBlock(
-          startKwhExclusive: 71,
+          startKwhExclusive: 70,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.881,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 500,
           rateBsPerKwh: 1.031,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.197,
         ),
@@ -1923,7 +1964,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'General 1': BlockTariff(
+    'General 1 y 3': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -1932,12 +1973,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.2846,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.231,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.395,
         ),
@@ -1948,7 +1989,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'General 2': BlockTariff(
+    'General 2 y 4': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
         EnergyBlock(
@@ -1957,12 +1998,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 3.4843,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.225,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.271,
         ),
@@ -1973,56 +2014,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'General 3': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 1.2846,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 1.231,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 1.395,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 300,
-          endKwhInclusive: null,
-          rateBsPerKwh: 2.05,
-        ),
-      ],
-    ),
-    'General 4': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 40,
-          rateBsPerKwh: 1.74215,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 41,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 1.225,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 1.271,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 300,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.963,
-        ),
-      ],
-    ),
+
     'Industrial 1': BlockTariff(
       fixedChargeBs: 0,
       blocks: const [
@@ -2032,12 +2024,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.2846,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.162,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 300,
           rateBsPerKwh: 1.317,
         ),
@@ -2067,17 +2059,17 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.9726,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 70,
           rateBsPerKwh: 0.761,
         ),
         EnergyBlock(
-          startKwhExclusive: 71,
+          startKwhExclusive: 70,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.872,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: null,
           rateBsPerKwh: 1.021,
         ),
@@ -2145,6 +2137,153 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
     ),
   },
   Distributor.elfec: {
+    'Domiciliaria PDBT': BlockTariff(
+      fixedChargeBs: 0,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 20,
+          rateBsPerKwh: 1.2101,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.88,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 20,
+          endKwhInclusive: 120,
+          rateBsPerKwh: 0.89,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 120,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 1.182,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 1.189,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.199,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.474,
+        ),
+      ],
+    ),
+
+    'Domiciliaria MDBT': BlockTariff(
+      fixedChargeBs: 0,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 20,
+          rateBsPerKwh: 1.4006,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 20,
+          endKwhInclusive: 120,
+          rateBsPerKwh: 0.448,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 120,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.628,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.718,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 0.724,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.89,
+        ),
+      ],
+    ),
+    'Domiciliaria MDMT': BlockTariff(
+      fixedChargeBs: 0,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 20,
+          rateBsPerKwh: 1.39925,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 20,
+          endKwhInclusive: 120,
+          rateBsPerKwh: 0.447,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 120,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 0.626,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 0.713,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 0.719,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 0.884,
+        ),
+      ],
+    ),
+
+    'Domiciliaria PDMT': BlockTariff(
+      fixedChargeBs: 0,
+      blocks: const [
+        EnergyBlock(
+          startKwhExclusive: 0,
+          endKwhInclusive: 20,
+          rateBsPerKwh: 1.2472,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 20,
+          endKwhInclusive: 120,
+          rateBsPerKwh: 0.795,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 120,
+          endKwhInclusive: 300,
+          rateBsPerKwh: 1.113,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 300,
+          endKwhInclusive: 500,
+          rateBsPerKwh: 1.127,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 500,
+          endKwhInclusive: 1000,
+          rateBsPerKwh: 1.136,
+        ),
+        EnergyBlock(
+          startKwhExclusive: 1000,
+          endKwhInclusive: null,
+          rateBsPerKwh: 1.396,
+        ),
+      ],
+    ),
     'Agro MDBT': BlockTariff(
       fixedChargeBs: 12.52,
       blocks: const [
@@ -2185,7 +2324,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Agua potable PDBT': BlockTariff(
+    'Agua potable PDBT (ExElepsa)': BlockTariff(
       fixedChargeBs: 18.885,
       blocks: const [
         EnergyBlock(
@@ -2302,16 +2441,19 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           startKwhExclusive: 0,
           endKwhInclusive: null,
           rateBsPerKwh: 1.307,
+          tou: 'alto',
         ),
         EnergyBlock(
           startKwhExclusive: 0,
           endKwhInclusive: null,
           rateBsPerKwh: 1.171,
+          tou: 'medio',
         ),
         EnergyBlock(
           startKwhExclusive: 0,
           endKwhInclusive: null,
           rateBsPerKwh: 1.051,
+          tou: 'bajo',
         ),
       ],
     ),
@@ -2369,7 +2511,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.93,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.748,
         ),
@@ -2394,7 +2536,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.915,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.584,
         ),
@@ -2405,191 +2547,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
         ),
       ],
     ),
-    'Domiciliaria EXELEPSA PDBT': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 0.9834,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.715,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 0.722,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 0.961,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 301,
-          endKwhInclusive: 500,
-          rateBsPerKwh: 0.966,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 501,
-          endKwhInclusive: 0,
-          rateBsPerKwh: 0.966,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 1000,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.966,
-        ),
-      ],
-    ),
-    'Domiciliaria MDBT': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 1.4006,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 0.448,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 0.628,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 301,
-          endKwhInclusive: 500,
-          rateBsPerKwh: 0.718,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 501,
-          endKwhInclusive: 1000,
-          rateBsPerKwh: 0.724,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 1000,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.89,
-        ),
-      ],
-    ),
-    'Domiciliaria MDMT': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 1.39925,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 0.447,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 0.626,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 301,
-          endKwhInclusive: 500,
-          rateBsPerKwh: 0.713,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 501,
-          endKwhInclusive: 1000,
-          rateBsPerKwh: 0.719,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 1000,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.884,
-        ),
-      ],
-    ),
-    'Domiciliaria PDBT': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 1.2101,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: null,
-          rateBsPerKwh: 0.88,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 0.89,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 1.182,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 301,
-          endKwhInclusive: 500,
-          rateBsPerKwh: 1.189,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 501,
-          endKwhInclusive: 1000,
-          rateBsPerKwh: 1.199,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 1000,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.474,
-        ),
-      ],
-    ),
-    'Domiciliaria PDMT': BlockTariff(
-      fixedChargeBs: 0,
-      blocks: const [
-        EnergyBlock(
-          startKwhExclusive: 0,
-          endKwhInclusive: 20,
-          rateBsPerKwh: 1.2472,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 21,
-          endKwhInclusive: 120,
-          rateBsPerKwh: 0.795,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 121,
-          endKwhInclusive: 300,
-          rateBsPerKwh: 1.113,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 301,
-          endKwhInclusive: 500,
-          rateBsPerKwh: 1.127,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 501,
-          endKwhInclusive: 1000,
-          rateBsPerKwh: 1.136,
-        ),
-        EnergyBlock(
-          startKwhExclusive: 1000,
-          endKwhInclusive: null,
-          rateBsPerKwh: 1.396,
-        ),
-      ],
-    ),
+
     'Escenarios deportivos GDMT': BlockTariff(
       fixedChargeBs: 17.751,
       blocks: const [
@@ -2739,12 +2697,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.57585,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.017,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 700,
           rateBsPerKwh: 1.122,
         ),
@@ -2824,12 +2782,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.48115,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.748,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 700,
           rateBsPerKwh: 1.93,
         ),
@@ -2849,12 +2807,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.302,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.584,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 700,
           rateBsPerKwh: 1.915,
         ),
@@ -2934,12 +2892,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.48115,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.748,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 700,
           rateBsPerKwh: 1.93,
         ),
@@ -2959,12 +2917,12 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 0.302,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 1.584,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: 700,
           rateBsPerKwh: 1.915,
         ),
@@ -3099,7 +3057,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.196,
         ),
         EnergyBlock(
-          startKwhExclusive: 21,
+          startKwhExclusive: 20,
           endKwhInclusive: 120,
           rateBsPerKwh: 0.966,
         ),
@@ -3306,7 +3264,7 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.49,
         ),
         EnergyBlock(
-          startKwhExclusive: 121,
+          startKwhExclusive: 120,
           endKwhInclusive: null,
           rateBsPerKwh: 1.493,
         ),
@@ -3331,22 +3289,22 @@ final Map<Distributor, Map<String, BlockTariff>> tariffCatalog = {
           rateBsPerKwh: 1.915333,
         ),
         EnergyBlock(
-          startKwhExclusive: 16,
+          startKwhExclusive: 15,
           endKwhInclusive: 70,
           rateBsPerKwh: 0.84,
         ),
         EnergyBlock(
-          startKwhExclusive: 71,
+          startKwhExclusive: 70,
           endKwhInclusive: 200,
           rateBsPerKwh: 0.861,
         ),
         EnergyBlock(
-          startKwhExclusive: 201,
+          startKwhExclusive: 200,
           endKwhInclusive: 500,
           rateBsPerKwh: 0.919,
         ),
         EnergyBlock(
-          startKwhExclusive: 501,
+          startKwhExclusive: 500,
           endKwhInclusive: 1000,
           rateBsPerKwh: 1.104,
         ),

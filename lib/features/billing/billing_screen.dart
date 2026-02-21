@@ -18,14 +18,16 @@ class BillingScreen extends ConsumerStatefulWidget {
 class _BillingScreenState extends ConsumerState<BillingScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  Distributor _dist = Distributor.elfec;
+  // Por defecto: CESSA
+  Distributor _dist = Distributor.cessa;
   String _cat = '';
 
   final _kwhCtrl = TextEditingController(text: '250');
-  final _rateCtrl = TextEditingController(text: '-'); // por bloques
-  final _fixedCtrl = TextEditingController(text: '0');
 
   BillingResult? _result;
+
+  // Para poder calcular la tarifa promedio (Bs/kWh) en pantalla
+  double? _lastKwh;
 
   double _parseNum(String s) {
     final normalized = s.trim().replaceAll(',', '.');
@@ -36,18 +38,15 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
     final cats = categoriesFor(_dist);
     if (cats.isEmpty) {
       _cat = '';
-      _fixedCtrl.text = '0';
-      _rateCtrl.text = '-';
       _result = null;
+      _lastKwh = null;
       return;
     }
     if (_cat.isEmpty || !cats.contains(_cat)) {
       _cat = cats.first;
     }
-    final t = tariffFor(_dist, _cat);
-    _fixedCtrl.text = t.fixedChargeBs.toStringAsFixed(3);
-    _rateCtrl.text = '-';
     _result = null;
+    _lastKwh = null;
   }
 
   @override
@@ -65,8 +64,7 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
     final service = ref.read(billingServiceProvider);
 
     setState(() {
-      _fixedCtrl.text = tariff.fixedChargeBs.toStringAsFixed(3);
-      _rateCtrl.text = '-';
+      _lastKwh = kwh;
       _result = service.calculateWithBlocks(kwhMonth: kwh, tariff: tariff);
     });
   }
@@ -74,8 +72,6 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
   @override
   void dispose() {
     _kwhCtrl.dispose();
-    _rateCtrl.dispose();
-    _fixedCtrl.dispose();
     super.dispose();
   }
 
@@ -139,7 +135,6 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
                   },
                 ),
                 const SizedBox(height: 12),
-
                 DropdownButtonFormField<String>(
                   value: _cat.isEmpty ? null : _cat,
                   decoration: const InputDecoration(labelText: 'Categoría'),
@@ -157,7 +152,6 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
                         },
                 ),
                 const SizedBox(height: 12),
-
                 if (cats.isEmpty)
                   const Card(
                     child: Padding(
@@ -167,7 +161,6 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
                       ),
                     ),
                   ),
-
                 TextFormField(
                   controller: _kwhCtrl,
                   keyboardType: TextInputType.number,
@@ -177,71 +170,174 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
                   validator: (v) {
                     if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
                     try {
-                      _parseNum(v);
+                      final parsed = _parseNum(v);
+                      if (parsed <= 0) return 'kWh debe ser > 0';
                     } catch (_) {
                       return 'Número inválido';
                     }
                     return null;
                   },
                 ),
-                const SizedBox(height: 12),
-
-                TextFormField(
-                  controller: _rateCtrl,
-                  enabled: false,
-                  decoration: const InputDecoration(
-                    labelText: 'Tarifa energía (Bs/kWh)',
-                  ),
-                ),
-                const SizedBox(height: 12),
-
-                TextFormField(
-                  controller: _fixedCtrl,
-                  enabled: false,
-                  decoration: const InputDecoration(
-                    labelText: 'Cargo fijo / Cmin (Bs/mes)',
-                  ),
-                ),
-
                 const SizedBox(height: 16),
                 FilledButton(
                   onPressed: cats.isEmpty ? null : _calculate,
-                  child: const Text('Calcular'),
+                  child: const Text(
+                    'Calcular tarifa (Sin Generación Distribuida)',
+                  ),
                 ),
                 const SizedBox(height: 12),
-
                 OutlinedButton(
                   onPressed: () => context.go('/sizing'),
-                  child: const Text('Ir a Dimensionamiento + Payback'),
-                ),
-
-                const SizedBox(height: 16),
-                if (_result != null)
-                  Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Resultado',
-                            style: Theme.of(context).textTheme.titleMedium,
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            'Cargo energía: ${_result!.energyChargeBs.toStringAsFixed(2)} Bs',
-                          ),
-                          Text(
-                            'Total: ${_result!.totalBs.toStringAsFixed(2)} Bs',
-                          ),
-                        ],
-                      ),
-                    ),
+                  child: const Text(
+                    'Ir a Dimensionamiento del sistema GD y retorno de inversión',
                   ),
+                ),
+                const SizedBox(height: 16),
+                AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 320),
+                  switchInCurve: Curves.easeOutCubic,
+                  switchOutCurve: Curves.easeInCubic,
+                  transitionBuilder: (child, anim) {
+                    final fade = CurvedAnimation(
+                      parent: anim,
+                      curve: Curves.easeOutCubic,
+                    );
+                    final slide =
+                        Tween<Offset>(
+                          begin: const Offset(0, 0.04),
+                          end: Offset.zero,
+                        ).animate(
+                          CurvedAnimation(
+                            parent: anim,
+                            curve: Curves.easeOutCubic,
+                          ),
+                        );
+
+                    return FadeTransition(
+                      opacity: fade,
+                      child: SlideTransition(position: slide, child: child),
+                    );
+                  },
+                  child: (_result == null)
+                      ? const SizedBox.shrink()
+                      : _ResultCard(
+                          key: ValueKey<String>(
+                            '${_dist.name}_${_cat}_'
+                            '${_result!.totalBs.toStringAsFixed(2)}_'
+                            '${_lastKwh?.toStringAsFixed(3) ?? "na"}',
+                          ),
+                          result: _result!,
+                          kwh: _lastKwh ?? 0,
+                        ),
+                ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _ResultCard extends StatelessWidget {
+  const _ResultCard({super.key, required this.result, required this.kwh});
+
+  final BillingResult result;
+  final double kwh;
+
+  @override
+  Widget build(BuildContext context) {
+    final avgRate = (kwh > 0) ? (result.energyChargeBs / kwh) : 0.0;
+
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Resultado', style: Theme.of(context).textTheme.titleMedium),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: _ResultChip(
+                    label: 'Tarifa promedio',
+                    value: 'Bs ${avgRate.toStringAsFixed(4)}/kWh',
+                    icon: Icons.bolt,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: _ResultChip(
+                    label: 'Total',
+                    value: 'Bs ${result.totalBs.toStringAsFixed(2)}',
+                    icon: Icons.payments_outlined,
+                    highlight: true,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            // Opcional: si quieres mostrar también el cargo de energía en Bs
+            // Text('Cargo energía: Bs ${result.energyChargeBs.toStringAsFixed(2)}'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _ResultChip extends StatelessWidget {
+  const _ResultChip({
+    required this.label,
+    required this.value,
+    required this.icon,
+    this.highlight = false,
+  });
+
+  final String label;
+  final String value;
+  final IconData icon;
+  final bool highlight;
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+
+    final baseColor = cs.surfaceVariant;
+    final bg = highlight ? cs.primaryContainer : baseColor;
+
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOutCubic,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: highlight ? cs.primary.withOpacity(0.25) : Colors.transparent,
+        ),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, color: highlight ? cs.primary : cs.onSurfaceVariant),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(label, style: Theme.of(context).textTheme.labelMedium),
+                const SizedBox(height: 4),
+                Text(
+                  value,
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

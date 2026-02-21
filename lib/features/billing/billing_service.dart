@@ -11,13 +11,22 @@ class BillingService {
   }
 
   /// Método por bloques (usa BlockTariff + EnergyBlock)
-  BillingResult calculateWithBlocks({
-    required double kwhMonth,
-    required BlockTariff tariff,
-  }) {
-    final energyCharge = computeEnergyCharge(kwhMonth, tariff.blocks);
-    final total = energyCharge + tariff.fixedChargeBs;
+ BillingResult calculateWithBlocks({
+  required double kwhMonth,
+  required BlockTariff tariff,
+  double? kwhAlto,
+  double? kwhMedio,
+  double? kwhBajo,
+}) {
+  final energyCharge = computeEnergyCharge(
+    kwhMonth,
+    tariff.blocks,
+    kwhAlto: kwhAlto,
+    kwhMedio: kwhMedio,
+    kwhBajo: kwhBajo,
+  );
 
-    return BillingResult(energyChargeBs: energyCharge, totalBs: total);
-  }
+  final total = energyCharge + tariff.fixedChargeBs;
+  return BillingResult(energyChargeBs: energyCharge, totalBs: total);
+}
 }

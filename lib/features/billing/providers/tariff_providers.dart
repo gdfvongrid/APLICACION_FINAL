@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../data/tariff_repository.dart';
 
 final tariffRepositoryProvider = Provider<TariffRepository>((ref) {
@@ -7,6 +6,6 @@ final tariffRepositoryProvider = Provider<TariffRepository>((ref) {
 });
 
 final tariffBundleProvider = FutureProvider<TariffBundle>((ref) async {
-  final repo = ref.read(tariffRepositoryProvider);
+  final repo = ref.watch(tariffRepositoryProvider);
   return repo.loadTariffs();
 });

@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 ThemeData buildTheme() {
-  final base = ThemeData(
+  return ThemeData(
     useMaterial3: true,
-    colorSchemeSeed: Colors.green,
-    brightness: Brightness.light,
-  );
-
-  return base.copyWith(
-    inputDecorationTheme: const InputDecorationTheme(
-      border: OutlineInputBorder(),
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: const Color.fromARGB(0, 12, 16, 154), // azul base
+      brightness: Brightness.light,
     ),
+    appBarTheme: const AppBarTheme(centerTitle: false),
   );
 }

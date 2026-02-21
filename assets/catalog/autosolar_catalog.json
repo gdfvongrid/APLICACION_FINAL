@@ -14,17 +14,93 @@
     }
   ],
   "inversores": [
-    {
-      "nombre": "Inversor Red Growatt MIN 5000TL-X",
-      "pacW": 5000.0,
-      "precioBs": 10838.35,
-      "tipo": "Monofásico"
-    },
-    {
-      "nombre": "Inversor Red Growatt MOD 10KTL3-X",
-      "pacW": 10000.0,
-      "precioBs": 16533.67,
-      "tipo": "Trifásico"
-    }
-  ]
+  {
+    "nombre": "Inversor Red Growatt MIN 5000TL-X",
+    "pacW": 5000.0,
+    "precioBs": 10838.35,
+    "tipo": "Monofásico"
+  },
+  {
+    "nombre": "Inversor Red Growatt MOD 10KTL3-X",
+    "pacW": 10000.0,
+    "precioBs": 16533.67,
+    "tipo": "Trifásico"
+  },
+
+  {
+    "nombre": "Inversor Huawei SUN2000L-5KTL Red 5000W",
+    "pacW": 5000.0,
+    "precioBs": 24833.92,
+    "tipo": "Monofásico"
+  },
+  {
+    "nombre": "Solis S5-GC100K-US 100kW",
+    "pacW": 100000.0,
+    "precioBs": 74442.26,
+    "tipo": "Trifásico"
+  },
+  {
+    "nombre": "Solis S5-GC100K 380V 100kW",
+    "pacW": 100000.0,
+    "precioBs": 75194.23,
+    "tipo": "Trifásico"
+  },
+  
+  {
+    "nombre": "Fronius Tauro 100kW",
+    "pacW": 100000.0,
+    "precioBs": 153735.12,
+    "tipo": "Trifásico"
+  },
+  {
+    "nombre": "Growatt MAC 60KTL3-X LV",
+    "pacW": 60000.0,
+    "precioBs": 49490.20,
+    "tipo": "Trifásico"
+  },
+  {
+    "nombre": "Solis S5-GC60K 60kW",
+    "pacW": 60000.0,
+    "precioBs": 50577.81,
+    "tipo": "Trifásico"
+  },
+ 
+  {
+    "nombre": "Growatt MID 30KTL3-X",
+    "pacW": 30000.0,
+    "precioBs": 36111.04,
+    "tipo": "Trifásico"
+  },
+  {
+    "nombre": "Huawei SUN2000-20KTL-M0",
+    "pacW": 20000.0,
+    "precioBs": 51400.80,
+    "tipo": "Trifásico"
+  },
+  {
+    "nombre": "SolaX X1 Mini 700VA",
+    "pacW": 700.0,
+    "precioBs": 8869.24,
+    "tipo": "Monofásico"
+  },
+  {
+    "nombre": "Growatt MIC 1000TL-X",
+    "pacW": 1000.0,
+    "precioBs": 4285.05,
+    "tipo": "Monofásico"
+  },
+  {
+    "nombre": "SolaX X1 Mini 1500VA",
+    "pacW": 1500.0,
+    "precioBs": 10168.39,
+    "tipo": "Monofásico"
+  },
+  {
+    "nombre": "Growatt MIN 3000TL-X",
+    "pacW": 3000.0,
+    "precioBs": 6629.77,
+    "tipo": "Monofásico"
+  }
+]
+
 }
