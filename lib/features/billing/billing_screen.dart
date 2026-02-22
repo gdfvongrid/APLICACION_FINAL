@@ -23,7 +23,9 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
   String _cat = '';
 
   final _kwhCtrl = TextEditingController(text: '250');
-
+  final _kwhAltoCtrl = TextEditingController(text: '100');
+  final _kwhMedioCtrl = TextEditingController(text: '200');
+  final _kwhBajoCtrl = TextEditingController(text: '10');
   BillingResult? _result;
 
   // Para poder calcular la tarifa promedio (Bs/kWh) en pantalla
@@ -59,29 +61,51 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
     if (!(_formKey.currentState?.validate() ?? false)) return;
     if (_cat.isEmpty) return;
 
-    final kwh = _parseNum(_kwhCtrl.text);
     final tariff = tariffFor(_dist, _cat);
     final service = ref.read(billingServiceProvider);
 
     setState(() {
-      _lastKwh = kwh;
-      _result = service.calculateWithBlocks(kwhMonth: kwh, tariff: tariff);
+      if (tariff.isTou) {
+        final ba = _parseNum(_kwhAltoCtrl.text);
+        final bm = _parseNum(_kwhMedioCtrl.text);
+        final bb = _parseNum(_kwhBajoCtrl.text);
+
+        final totalKwh = ba + bm + bb;
+        _lastKwh = totalKwh;
+
+        _result = service.calculateWithBlocks(
+          kwhMonth: totalKwh,
+          tariff: tariff,
+          kwhAlto: ba,
+          kwhMedio: bm,
+          kwhBajo: bb,
+        );
+      } else {
+        final kwh = _parseNum(_kwhCtrl.text);
+        _lastKwh = kwh;
+
+        _result = service.calculateWithBlocks(kwhMonth: kwh, tariff: tariff);
+      }
     });
   }
 
   @override
   void dispose() {
     _kwhCtrl.dispose();
+    _kwhAltoCtrl.dispose();
+    _kwhMedioCtrl.dispose();
+    _kwhBajoCtrl.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final cats = categoriesFor(_dist);
-
+    final currentTariff = (_cat.isEmpty) ? null : tariffFor(_dist, _cat);
+    final isTou = currentTariff?.isTou ?? false;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Facturación (por bloques)'),
+        title: const Text('Facturación)'),
         actions: [
           IconButton(
             tooltip: 'Inicio',
@@ -161,23 +185,79 @@ class _BillingScreenState extends ConsumerState<BillingScreen> {
                       ),
                     ),
                   ),
-                TextFormField(
-                  controller: _kwhCtrl,
-                  keyboardType: TextInputType.number,
-                  decoration: const InputDecoration(
-                    labelText: 'Energía mensual (kWh)',
+                if (!isTou)
+                  TextFormField(
+                    controller: _kwhCtrl,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Energía mensual (kWh)',
+                    ),
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
+                      try {
+                        final parsed = _parseNum(v);
+                        if (parsed <= 0) return 'kWh debe ser > 0';
+                      } catch (_) {
+                        return 'Número inválido';
+                      }
+                      return null;
+                    },
+                  )
+                else ...[
+                  TextFormField(
+                    controller: _kwhAltoCtrl,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Bloque Alto (kWh)',
+                    ),
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
+                      try {
+                        final parsed = _parseNum(v);
+                        if (parsed < 0) return 'kWh debe ser ≥ 0';
+                      } catch (_) {
+                        return 'Número inválido';
+                      }
+                      return null;
+                    },
                   ),
-                  validator: (v) {
-                    if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
-                    try {
-                      final parsed = _parseNum(v);
-                      if (parsed <= 0) return 'kWh debe ser > 0';
-                    } catch (_) {
-                      return 'Número inválido';
-                    }
-                    return null;
-                  },
-                ),
+                  const SizedBox(height: 12),
+                  TextFormField(
+                    controller: _kwhMedioCtrl,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Bloque Medio (kWh)',
+                    ),
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
+                      try {
+                        final parsed = _parseNum(v);
+                        if (parsed < 0) return 'kWh debe ser ≥ 0';
+                      } catch (_) {
+                        return 'Número inválido';
+                      }
+                      return null;
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  TextFormField(
+                    controller: _kwhBajoCtrl,
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      labelText: 'Bloque Bajo (kWh)',
+                    ),
+                    validator: (v) {
+                      if (v == null || v.trim().isEmpty) return 'Ingresa kWh';
+                      try {
+                        final parsed = _parseNum(v);
+                        if (parsed < 0) return 'kWh debe ser ≥ 0';
+                      } catch (_) {
+                        return 'Número inválido';
+                      }
+                      return null;
+                    },
+                  ),
+                ],
                 const SizedBox(height: 16),
                 FilledButton(
                   onPressed: cats.isEmpty ? null : _calculate,
